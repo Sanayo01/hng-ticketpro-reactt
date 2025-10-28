@@ -1,0 +1,50 @@
+/* --- Global Layout Wrapper (Ensures Footer is at the bottom) --- */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- Main Content Area (Applies Flex grow) --- */
+.content-container {
+  flex-grow: 1; /* Makes the content area fill the space */
+  padding: 0 20px; /* Optional padding for smaller screens */
+}
+
+/* --- Max-Width Container (The main requirement) --- */
+.page-content {
+  max-width: 1440px;
+  margin: 0 auto; /* Centers the content */
+  width: 100%;
+}
+
+/* --- Footer Styling --- */
+.footer-container {
+  background-color: #333; /* Dark background */
+  color: #f0f0f0;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px; /* Padding for the sides */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: #f0f0f0;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Ensure the Hero component in App.jsx can still take full viewport height/width */
+/* We will update App.jsx to NOT use the Layout for the Landing Page */

@@ -1,0 +1,205 @@
+.ticket-management-page {
+  padding: 40px 0;
+  min-height: 70vh;
+}
+
+.ticket-management-page h1 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* --- Feedback Toasts --- */
+.feedback-toast {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.feedback-toast.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.feedback-toast.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* --- Ticket List Grid --- */
+.ticket-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* --- Ticket Card Styling (Required: Card-style boxes with shadows) --- */
+.ticket-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid #ccc;
+  transition: transform 0.2s;
+}
+
+.ticket-card:hover {
+    transform: translateY(-2px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 1.15rem;
+  margin: 0;
+  color: #333;
+}
+
+.card-description {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #eee;
+}
+
+/* --- Status Tag Styling (Mandatory Colors) --- */
+.status-tag {
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+}
+/* open → Green tone */
+.status-tag.open { background-color: #28a745; }
+/* in_progress → Amber tone */
+.status-tag.in-progress { background-color: #ffc107; color: #333; }
+/* closed → Gray tone */
+.status-tag.closed { background-color: #6c757d; }
+
+/* Card Border Coloring */
+.ticket-card.open { border-left-color: #28a745; }
+.ticket-card.in-progress { border-left-color: #ffc107; }
+.ticket-card.closed { border-left-color: #6c757d; }
+
+
+/* --- Card Actions --- */
+.card-actions {
+    display: flex;
+    gap: 10px;
+}
+.btn-edit, .btn-delete {
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.btn-edit {
+    background-color: #17a2b8;
+    color: white;
+}
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+
+/* --- Modal and Form Styling --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.ticket-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.ticket-form input[type="text"],
+.ticket-form textarea,
+.ticket-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.inline-error {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.form-actions button.btn-secondary {
+    background-color: #6c757d;
+}
+
+.form-actions button.btn-secondary:hover {
+    background-color: #5a6268;
+}
