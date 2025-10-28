@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App.jsx"; // Landing Page (Full screen Hero)
 import Contact from "./Contact.jsx"; 
-import Layout from "/src/components/Layout.jsx";
+import Layout from "/src/components/layout.jsx";
 import Login from "./pages/Login.jsx"; 
 import Signup from "./pages/Signup.jsx"; 
 import ProtectedRoute from "./components/ProtectedRoute.jsx"; 
